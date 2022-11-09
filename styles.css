@@ -48,6 +48,11 @@ h1 {
 }
 
 /* highlight div with mouse hover */
-.block-style:hover {
+.hover-effect:hover {
   background-color: #d2f9eb;
+}
+
+/* colour box on click  */
+.colour-in {
+  background-color: black;
 }
