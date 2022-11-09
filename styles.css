@@ -1,0 +1,25 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f3f9d2;
+  color: black;
+  font-family: Poppins;
+  font-size: 20px;
+}
+
+.container {
+  /* debug */
+  border: 2px solid red;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 15px 30px;
+}
+
+h1 {
+  margin-bottom: 20px;
+  font-size: 50px;
+}
