@@ -12,6 +12,7 @@ body {
 }
 
 .container {
+  border: 1px solid orangered;
   max-width: 1000px;
   margin: 0 auto;
   padding: 15px 30px;
@@ -22,18 +23,26 @@ h1 {
   font-size: 50px;
 }
 
-.container.canvas {
+.container .canvas {
   /* debug */
-  border: 2px solid red;
+  border: 4px solid #787878;
   padding: 0;
-  width: 600px;
-  height: 600px;
+  width: 648px;
+  height: 648px;
+
+  display: flex;
+  flex-wrap: wrap;
 }
 
 /* class that will give the divs the grid look */
 
 .block-style {
-  border: 2px solid salmon;
-  height: 37.5px;
-  width: 37.5px;
+  border: 2px solid #fce7c3;
+  height: 40px;
+  width: 40px;
+}
+
+/* highlight div with mouse hover */
+.block-style:hover {
+  background-color: #d2f9eb;
 }
