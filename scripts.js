@@ -25,18 +25,51 @@ function clearCanvas(list) {
     }
   });
 }
+function boxColoured(event) {
+  console.log("You clicked the erase button");
+  gridBox.forEach((box) => {
+    box.addEventListener("mouseenter", (e) => {
+      if (box.classList.contains("colour-in")) {
+        console.log("This box is coloured");
+        console.log(e.target);
+        box.classList.add("eraser-hover");
+
+        box.addEventListener("click", (e) => {
+          erase(e.target);
+        });
+      }
+    });
+  });
+}
+
+function erase(targetBox) {
+  targetBox.classList.remove("colour-in", "eraser-hover");
+  targetBox.classList.add("box", "hover-effect");
+}
+
+function draw() {
+  gridBox.forEach((box) => {
+    box.addEventListener("mousedown", colourBox);
+    // box.addEventListener("mouseover", colourBox);
+  });
+}
 
 createGrid();
 
 // event listeners
 const gridBox = document.querySelectorAll(".box");
 const clearButton = document.querySelector("#clear-btn");
+const eraseButton = document.querySelector("#eraser");
+const drawButton = document.querySelector("#draw");
 
-gridBox.forEach((box) => {
-  box.addEventListener("mousedown", colourBox);
-  //   box.addEventListener("mouseover", colourBox);
+drawButton.addEventListener("click", (e) => {
+  draw();
 });
 
 clearButton.addEventListener("click", (e) => {
   clearCanvas(gridBox);
+});
+
+eraseButton.addEventListener("click", (e) => {
+  boxColoured();
 });
