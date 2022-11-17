@@ -3,7 +3,7 @@ let drawClicked = false;
 let mouseDown = false;
 let mouseUp = false;
 
-const gridContainer = document.querySelector(".canvas");
+const canvas = document.querySelector(".canvas");
 const tools = document.querySelector(".tools");
 const drawBtn = document.querySelector("#draw");
 const eraserBtn = document.querySelector("#eraser");
@@ -13,7 +13,7 @@ function createGrid() {
   for (const x of Array(256).keys()) {
     const div = document.createElement("div");
     div.classList.add("block-style", "box", "hover-effect");
-    gridContainer.appendChild(div);
+    canvas.appendChild(div);
   }
 }
 
@@ -24,7 +24,6 @@ function getbuttonClicked() {
     if (!isButton) {
       return;
     }
-    console.log(event.target);
     if (event.target.id === "draw") {
       drawClicked = true;
       eraserClicked = false;
