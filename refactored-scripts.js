@@ -1,5 +1,7 @@
 let eraserClicked = false;
 let drawClicked = false;
+let mouseDown = false;
+let mouseUp = false;
 
 const gridContainer = document.querySelector(".canvas");
 const tools = document.querySelector(".tools");
@@ -72,6 +74,18 @@ function draw() {
   gridBox.forEach((box) => {
     box.classList.remove("eraser-hover");
     box.addEventListener("click", colourBox);
+    // continous draw when holding down mouse
+    box.addEventListener("mousedown", (event) => {
+      mouseDown = true; // toggle mouseDown true/false
+    });
+    box.addEventListener("mousemove", (event) => {
+      if (mouseDown) {
+        colourBox(event);
+      }
+    });
+    box.addEventListener("mouseup", (event) => {
+      mouseDown = false;
+    });
   });
 }
 
