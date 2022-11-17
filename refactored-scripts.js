@@ -70,6 +70,7 @@ function draw() {
   // all the created div boxes
   const gridBox = document.querySelectorAll(".box");
   gridBox.forEach((box) => {
+    box.classList.remove("eraser-hover");
     box.addEventListener("click", colourBox);
   });
 }
