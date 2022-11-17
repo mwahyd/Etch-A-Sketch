@@ -16,11 +16,14 @@ body {
 }
 
 .container {
-  border: 1px solid orangered;
-  /* flex: 1; */
+  /* border: 1px solid orangered; */
   min-width: 1000px;
   margin: 0 auto;
   padding: 15px 30px;
+}
+
+header {
+  background-color: #ecf5bd;
 }
 
 h1 {
@@ -37,19 +40,20 @@ h1 {
 }
 
 .container.grid {
+  /* border: 8px solid #fce7c3; */
+  border: 8px solid #d3de9f;
   flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  gap: 35px;
 }
 
 .container.grid .tools {
-  border: 2px solid salmon;
   display: flex;
   flex-direction: row;
-  gap: 20px;
+  gap: 30px;
+  margin-bottom: 40px;
 }
 
 .container .canvas {
@@ -62,11 +66,12 @@ h1 {
   flex-wrap: wrap;
 }
 
-footer.container {
-  border: 4px solid blue;
+footer.footer {
+  background-color: #e7ecc8;
   padding: 0px;
   max-height: 50px;
   line-height: 50px;
+  text-align: center;
 }
 
 /* class that will give the divs the grid look */
