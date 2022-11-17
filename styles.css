@@ -64,7 +64,6 @@ footer.container {
 }
 
 /* class that will give the divs the grid look */
-
 .block-style {
   border: 2px solid #fce7c3;
   height: 40px;
@@ -99,4 +98,9 @@ button:hover {
 /* eraser hover colour */
 .eraser-hover:hover {
   background-color: #f28a98;
+}
+
+/* selected */
+.selected {
+  background-color: #ea5084;
 }
