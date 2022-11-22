@@ -168,5 +168,5 @@ function clearCanvas() {
   });
 }
 
-createGrid();
+slider();
 getbuttonClicked();
