@@ -11,6 +11,13 @@ const eraserBtn = document.querySelector("#eraser");
 const gridSlider = document.querySelector("#grid-slider");
 const sliderValue = document.querySelector("#slider-value");
 
+function slider() {
+  valPercent = (gridSlider.value / gridSlider.max) * 100;
+  gridSlider.style.backgroundImage = `linear-gradient(to right, #9b9b15 ${valPercent}%, #efeeee ${valPercent}%)`;
+  sliderValue.textContent = `Grid Size: ${gridSlider.value} x ${gridSlider.value} `;
+  let newSliderValue = Number(gridSlider.value);
+}
+
 function createGrid() {
   // create a 16 x 16 grid
   for (const x of Array(256).keys()) {
