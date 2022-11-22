@@ -16,16 +16,44 @@ function slider() {
   gridSlider.style.backgroundImage = `linear-gradient(to right, #9b9b15 ${valPercent}%, #efeeee ${valPercent}%)`;
   sliderValue.textContent = `Grid Size: ${gridSlider.value} x ${gridSlider.value} `;
   let newSliderValue = Number(gridSlider.value);
-}
-
-function createGrid() {
-  // create a 16 x 16 grid
-  for (const x of Array(256).keys()) {
-    const div = document.createElement("div");
-    div.classList.add("block-style", "box", "hover-effect");
-    canvas.appendChild(div);
+  if (defaultGridSize === newSliderValue) {
+    // createGridTest2(defaultGridSize);
+    createGrid(defaultGridSize);
+  } else {
+    clearGrid();
+    createGrid(newSliderValue);
   }
 }
+
+function createGrid(sliderValue) {
+  let height = null,
+    rowheight = null,
+    gridValue = sliderValue;
+  height = 638 / gridValue;
+  rowheight = 635 / gridValue;
+  for (const row of Array(gridValue).keys()) {
+    const rowDiv = document.createElement("div");
+    rowDiv.style.display = "flex";
+    rowDiv.style.height = `${rowheight}px`;
+    // rowDiv.style.cssText = `height: ${height}px`;
+    for (const column of Array(gridValue).keys()) {
+      const columnDiv = document.createElement("div");
+      columnDiv.style.cssText = `border: 2px solid #fce7c3; height: ${height}px; width: ${height}px; flex: 1`;
+      columnDiv.classList.add("box", "hover-effect");
+      rowDiv.appendChild(columnDiv);
+    }
+    canvas.appendChild(rowDiv);
+  }
+}
+
+// function createGrid() {
+//   // create a 16 x 16 grid
+//   for (const x of Array(256).keys()) {
+//     const div = document.createElement("div");
+//     div.classList.add("block-style", "box", "hover-effect");
+//     canvas.appendChild(div);
+//   }
+// }
 
 function getbuttonClicked() {
   // check which button was clicked
