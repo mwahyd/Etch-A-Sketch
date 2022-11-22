@@ -76,6 +76,16 @@ footer.footer {
   text-align: center;
 }
 
+footer a {
+  text-decoration: none;
+  color: black;
+}
+
+footer a:hover {
+  /* border-bottom: 3px solid #f28aad; */
+  background-color: #f28aad;
+}
+
 /* class that will give the divs the grid look */
 .block-style {
   border: 2px solid #fce7c3;
