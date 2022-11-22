@@ -2,11 +2,14 @@ let eraserClicked = false;
 let drawClicked = false;
 let mouseDown = false;
 let mouseUp = false;
+let defaultGridSize = 16;
 
 const canvas = document.querySelector(".canvas");
 const tools = document.querySelector(".tools");
 const drawBtn = document.querySelector("#draw");
 const eraserBtn = document.querySelector("#eraser");
+const gridSlider = document.querySelector("#grid-slider");
+const sliderValue = document.querySelector("#slider-value");
 
 function createGrid() {
   // create a 16 x 16 grid
