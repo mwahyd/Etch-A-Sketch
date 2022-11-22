@@ -46,6 +46,12 @@ function createGrid(sliderValue) {
   }
 }
 
+function clearGrid() {
+  while (canvas.firstChild) {
+    canvas.removeChild(canvas.firstChild);
+  }
+}
+
 // function createGrid() {
 //   // create a 16 x 16 grid
 //   for (const x of Array(256).keys()) {
