@@ -22,21 +22,19 @@ body {
   padding: 15px 30px;
 }
 
-header {
-  background-color: #ecf5bd;
-}
-
 h1 {
   /* margin-bottom: 20px; */
   font-size: 50px;
   color: #6f6f6f;
+  padding: 30px;
 }
 
 .header {
+  background-color: #ecf5bd;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 80px;
+  max-height: 120px;
 }
 
 .container.grid {
