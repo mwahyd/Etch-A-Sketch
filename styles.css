@@ -116,6 +116,28 @@ button:hover {
   background-color: #f28aad;
 }
 
+/* colour wheel selector settings */
+#colour-wheel {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 90px;
+  height: 90px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+#colour-wheel::-webkit-color-swatch {
+  border-radius: 50%;
+  border: 7px solid #f28aad;
+}
+
+#colour-wheel::-moz-color-swatch {
+  border-radius: 50%;
+  border: 7px solid #f28aad;
+}
+
 /* eraser hover colour */
 .eraser-hover:hover {
   background-color: #f28a98;
