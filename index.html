@@ -19,7 +19,11 @@
 
     <div class="container grid">
       <div class="tools">
-        <input type="color" value="#00000" id="colour-wheel" />
+        <input
+          type="color"
+          value="#000000"
+          id="colour-wheel"
+          oninput="getColour()" />
         <button id="draw">Draw</button>
         <button id="eraser">Eraser</button>
         <button id="clear-btn">Clear</button>
