@@ -158,7 +158,10 @@ function colourBox(event) {
 function erase() {
   const gridBox = document.querySelectorAll(".box");
   gridBox.forEach((box) => {
-    if (box.classList.contains("colour-in")) {
+    if (
+      box.classList.contains("colour-in") ||
+      box.classList.contains("new-colour")
+    ) {
       box.classList.add("eraser-hover");
     }
     box.addEventListener("click", eraseBox);
