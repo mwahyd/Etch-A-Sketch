@@ -65,15 +65,6 @@ function clearGrid() {
   }
 }
 
-// function createGrid() {
-//   // create a 16 x 16 grid
-//   for (const x of Array(256).keys()) {
-//     const div = document.createElement("div");
-//     div.classList.add("block-style", "box", "hover-effect");
-//     canvas.appendChild(div);
-//   }
-// }
-
 function getbuttonClicked() {
   // check which button was clicked
   tools.addEventListener("click", (event) => {
@@ -114,10 +105,6 @@ function eraserButton() {
     eraserBtn.classList.add("selected");
   }
 }
-
-// refactor code
-// function getgridBox() {
-// }
 
 function draw() {
   // all the created div boxes
