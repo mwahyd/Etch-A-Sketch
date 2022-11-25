@@ -6,10 +6,20 @@ let defaultGridSize = 16;
 
 const canvas = document.querySelector(".canvas");
 const tools = document.querySelector(".tools");
+const colourWheel = document.querySelector("#colour-wheel");
 const drawBtn = document.querySelector("#draw");
 const eraserBtn = document.querySelector("#eraser");
 const gridSlider = document.querySelector("#grid-slider");
 const sliderValue = document.querySelector("#slider-value");
+
+function getColour() {
+  let selectedColour = colourWheel.value;
+  if (defaultColour === selectedColour) {
+    return defaultColour;
+  } else {
+    return selectedColour;
+  }
+}
 
 function slider() {
   valPercent = (gridSlider.value / gridSlider.max) * 100;
