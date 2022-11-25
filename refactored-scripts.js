@@ -32,7 +32,6 @@ function slider() {
   sliderValue.textContent = `Grid Size: ${gridSlider.value} x ${gridSlider.value} `;
   let newSliderValue = Number(gridSlider.value);
   if (defaultGridSize === newSliderValue) {
-    // createGridTest2(defaultGridSize);
     createGrid(defaultGridSize);
   } else {
     clearGrid();
@@ -50,7 +49,6 @@ function createGrid(sliderValue) {
     const rowDiv = document.createElement("div");
     rowDiv.style.display = "flex";
     rowDiv.style.height = `${rowheight}px`;
-    // rowDiv.style.cssText = `height: ${height}px`;
     for (const column of Array(gridValue).keys()) {
       const columnDiv = document.createElement("div");
       columnDiv.style.cssText = `border: 2px solid #fce7c3; height: ${height}px; width: ${height}px; flex: 1`;
