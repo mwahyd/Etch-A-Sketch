@@ -171,7 +171,7 @@ function erase() {
 function eraseBox(event) {
   const box = event.target;
   if (eraserClicked === true && drawClicked === false) {
-    box.classList.remove("colour-in", "eraser-hover");
+    box.classList.remove("colour-in", "new-colour", "eraser-hover");
     box.classList.add("hover-effect");
   }
 }
