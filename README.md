@@ -24,4 +24,4 @@ Tools:
 - CSS
 - Javascript
 
-![Screenshot]("pixel sketch pad.png")
+![Screenshot!](sketchpad-example.png)
