@@ -4,6 +4,7 @@ let mouseDown = false;
 let mouseUp = false;
 let defaultGridSize = 16;
 
+const root = document.querySelector(":root");
 const canvas = document.querySelector(".canvas");
 const tools = document.querySelector(".tools");
 const colourWheel = document.querySelector("#colour-wheel");
