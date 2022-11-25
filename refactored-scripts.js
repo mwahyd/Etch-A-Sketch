@@ -32,6 +32,8 @@ function slider() {
   sliderValue.textContent = `Grid Size: ${gridSlider.value} x ${gridSlider.value} `;
   let newSliderValue = Number(gridSlider.value);
   if (defaultGridSize === newSliderValue) {
+    // clearGrid();
+    clearGrid();
     createGrid(defaultGridSize);
   } else {
     clearGrid();
