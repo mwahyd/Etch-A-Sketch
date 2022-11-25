@@ -1,5 +1,6 @@
 # Pixel Sketch App
 
+[Web App](https://mwahyd.github.io/Etch-A-Sketch/)
 A sketchpad app you can draw on.
 
 App Functionalities:
