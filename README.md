@@ -13,16 +13,16 @@ App Functionalities:
 - A clear canvas function
 - Use the slider to create different grid sizes (up to 64 x 64 )
 
-Features to Add:
-
-- Colour palette not limited to just 2 colours 
-- Change background styles of canvas
-
 Tools:
 
 - HTML
 - CSS
 - Javascript
+
+Features to Add:
+
+- Colour palette not limited to just 2 colours 
+- Change background styles of canvas
 
 ![Screenshot!](sketchpad-example.png)
 
