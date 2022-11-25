@@ -141,10 +141,17 @@ function draw() {
 }
 
 function colourBox(event) {
-  const box = event.target;
   if (drawClicked === true && eraserClicked === false) {
-    box.classList.add("colour-in");
-    box.classList.remove("hover-effect");
+    const box = event.target;
+    const selectedColour = getColour();
+    if (selectedColour === defaultColour) {
+      box.classList.add("colour-in");
+      box.classList.remove("hover-effect");
+    } else if (selectedColour !== defaultColour) {
+      root.style.setProperty("--newColour", selectedColour);
+      box.classList.add("new-colour");
+      box.classList.remove("hover-effect");
+    }
   }
 }
 
