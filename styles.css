@@ -149,12 +149,12 @@ button:hover {
 
 #colour-wheel::-webkit-color-swatch {
   border-radius: 50%;
-  border: 7px solid #f28aad;
+  border: 7px solid #787878;
 }
 
 #colour-wheel::-moz-color-swatch {
   border-radius: 50%;
-  border: 7px solid #f28aad;
+  border: 7px solid #787878;
 }
 
 /* slider */
