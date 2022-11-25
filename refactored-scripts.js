@@ -1,5 +1,6 @@
 let eraserClicked = false;
 let drawClicked = false;
+let colourMixClicked = false;
 let mouseDown = false;
 let mouseUp = false;
 let defaultGridSize = 16;
@@ -10,6 +11,7 @@ const tools = document.querySelector(".tools");
 const colourWheel = document.querySelector("#colour-wheel");
 const drawBtn = document.querySelector("#draw");
 const eraserBtn = document.querySelector("#eraser");
+const colourMixBtn = document.querySelector("#colourMix");
 const gridSlider = document.querySelector("#grid-slider");
 const sliderValue = document.querySelector("#slider-value");
 
@@ -76,13 +78,20 @@ function getbuttonClicked() {
     if (event.target.id === "draw") {
       drawClicked = true;
       eraserClicked = false;
+      colourMixClicked = false;
       drawButton();
       draw();
     } else if (event.target.id === "eraser") {
       eraserClicked = true;
       drawClicked = false;
+      colourMixClicked = false;
       eraserButton();
       erase();
+    } else if (event.target.id === "colourMix") {
+      colourMixClicked = true;
+      eraserClicked = false;
+      drawClicked = false;
+      colourMixButton();
     } else if (event.target.id === "clear-btn") {
       clearCanvas();
     }
@@ -90,20 +99,44 @@ function getbuttonClicked() {
 }
 
 function drawButton() {
-  if (eraserClicked === false) {
+  if (eraserClicked === false || colourMixClicked == false) {
     eraserBtn.classList.remove("selected");
+    colourMixBtn.classList.remove("multicolour");
   }
-  if (drawClicked === true && eraserClicked === false) {
+  if (
+    drawClicked === true &&
+    eraserClicked === false &&
+    colourMixClicked == false
+  ) {
     drawBtn.classList.add("selected");
   }
 }
 
 function eraserButton() {
-  if (drawClicked === false) {
+  if (drawClicked === false || colourMixClicked == false) {
+    drawBtn.classList.remove("selected");
+    colourMixBtn.classList.remove("multicolour");
+  }
+  if (
+    eraserClicked === true &&
+    drawClicked === false &&
+    colourMixClicked === false
+  ) {
+    eraserBtn.classList.add("selected");
+  }
+}
+
+function colourMixButton() {
+  if (drawClicked === false || eraserClicked == false) {
+    eraserBtn.classList.remove("selected");
     drawBtn.classList.remove("selected");
   }
-  if (eraserClicked === true && drawClicked === false) {
-    eraserBtn.classList.add("selected");
+  if (
+    colourMixClicked === true &&
+    drawClicked === false &&
+    eraserClicked === false
+  ) {
+    colourMixBtn.classList.add("multicolour");
   }
 }
 
