@@ -152,6 +152,17 @@ function erase() {
       box.classList.add("eraser-hover");
     }
     box.addEventListener("click", eraseBox);
+    box.addEventListener("mousedown", (event) => {
+      mouseDown = true; // toggle mouseDown true/false
+    });
+    box.addEventListener("mousemove", (event) => {
+      if (mouseDown) {
+        eraseBox(event);
+      }
+    });
+    box.addEventListener("mouseup", (event) => {
+      mouseDown = false;
+    });
   });
 }
 
