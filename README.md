@@ -2,6 +2,8 @@
 
 A sketchpad app you can draw on.
 
+[Live Web App](https://mwahyd.github.io/Etch-A-Sketch/)
+
 App Functionalities:
 
 - Click on draw button and paint using 2 colours (default colour black)
@@ -26,4 +28,4 @@ Tools:
 
 ![Screenshot!](sketchpad-example.png)
 
-[Live Web App](https://mwahyd.github.io/Etch-A-Sketch/)
+
