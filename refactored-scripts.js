@@ -12,6 +12,9 @@ const eraserBtn = document.querySelector("#eraser");
 const gridSlider = document.querySelector("#grid-slider");
 const sliderValue = document.querySelector("#slider-value");
 
+const rootStyles = getComputedStyle(root);
+const defaultColour = rootStyles.getPropertyValue("--colour").trim();
+
 function getColour() {
   let selectedColour = colourWheel.value;
   if (defaultColour === selectedColour) {
