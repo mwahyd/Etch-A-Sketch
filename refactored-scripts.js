@@ -79,7 +79,7 @@ function getbuttonClicked() {
       eraserButton();
       erase();
     } else if (event.target.id === "clear-btn") {
-      clearButton();
+      clearCanvas();
     }
   });
 }
@@ -100,11 +100,6 @@ function eraserButton() {
   if (eraserClicked === true && drawClicked === false) {
     eraserBtn.classList.add("selected");
   }
-}
-
-function clearButton() {
-  console.log("The clear button was clicked");
-  clearCanvas();
 }
 
 // refactor code
