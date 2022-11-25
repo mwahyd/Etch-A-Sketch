@@ -127,12 +127,16 @@ button:hover {
 
 /* eraser hover colour */
 .eraser-hover:hover {
-  background-color: #f28a98;
+  background-color: #ffff33;
 }
 
 /* selected */
 .selected {
   background-color: #ea5084;
+}
+
+.multicolour {
+  background-image: linear-gradient(to right, orange, yellow);
 }
 
 /* colour wheel selector settings */
