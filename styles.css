@@ -1,5 +1,6 @@
 :root {
   --colour: #000000;
+  --newColour: ;
 }
 
 * {
@@ -105,6 +106,10 @@ footer a:hover {
   background-color: var(--colour);
 }
 
+.new-colour {
+  background-color: var(--newColour);
+}
+
 /* all the button styles */
 button {
   background-color: #f9d2df;
@@ -118,6 +123,16 @@ button {
 
 button:hover {
   background-color: #f28aad;
+}
+
+/* eraser hover colour */
+.eraser-hover:hover {
+  background-color: #f28a98;
+}
+
+/* selected */
+.selected {
+  background-color: #ea5084;
 }
 
 /* colour wheel selector settings */
@@ -140,16 +155,6 @@ button:hover {
 #colour-wheel::-moz-color-swatch {
   border-radius: 50%;
   border: 7px solid #f28aad;
-}
-
-/* eraser hover colour */
-.eraser-hover:hover {
-  background-color: #f28a98;
-}
-
-/* selected */
-.selected {
-  background-color: #ea5084;
 }
 
 /* slider */
