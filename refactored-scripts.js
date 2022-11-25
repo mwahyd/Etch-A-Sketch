@@ -1,6 +1,5 @@
 let eraserClicked = false;
 let drawClicked = false;
-let colourMixClicked = false;
 let mouseDown = false;
 let mouseUp = false;
 let defaultGridSize = 16;
@@ -78,20 +77,13 @@ function getbuttonClicked() {
     if (event.target.id === "draw") {
       drawClicked = true;
       eraserClicked = false;
-      colourMixClicked = false;
       drawButton();
       draw();
     } else if (event.target.id === "eraser") {
       eraserClicked = true;
       drawClicked = false;
-      colourMixClicked = false;
       eraserButton();
       erase();
-    } else if (event.target.id === "colourMix") {
-      colourMixClicked = true;
-      eraserClicked = false;
-      drawClicked = false;
-      colourMixButton();
     } else if (event.target.id === "clear-btn") {
       clearCanvas();
     }
@@ -99,44 +91,20 @@ function getbuttonClicked() {
 }
 
 function drawButton() {
-  if (eraserClicked === false || colourMixClicked == false) {
+  if (eraserClicked === false) {
     eraserBtn.classList.remove("selected");
-    colourMixBtn.classList.remove("multicolour");
   }
-  if (
-    drawClicked === true &&
-    eraserClicked === false &&
-    colourMixClicked == false
-  ) {
+  if (drawClicked === true && eraserClicked === false) {
     drawBtn.classList.add("selected");
   }
 }
 
 function eraserButton() {
-  if (drawClicked === false || colourMixClicked == false) {
+  if (drawClicked === false) {
     drawBtn.classList.remove("selected");
-    colourMixBtn.classList.remove("multicolour");
   }
-  if (
-    eraserClicked === true &&
-    drawClicked === false &&
-    colourMixClicked === false
-  ) {
+  if (eraserClicked === true && drawClicked === false) {
     eraserBtn.classList.add("selected");
-  }
-}
-
-function colourMixButton() {
-  if (drawClicked === false || eraserClicked == false) {
-    eraserBtn.classList.remove("selected");
-    drawBtn.classList.remove("selected");
-  }
-  if (
-    colourMixClicked === true &&
-    drawClicked === false &&
-    eraserClicked === false
-  ) {
-    colourMixBtn.classList.add("multicolour");
   }
 }
 

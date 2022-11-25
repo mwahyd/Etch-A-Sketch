@@ -135,10 +135,6 @@ button:hover {
   background-color: #ea5084;
 }
 
-.multicolour {
-  background-image: linear-gradient(to right, orange, yellow);
-}
-
 /* colour wheel selector settings */
 #colour-wheel {
   -webkit-appearance: none;
