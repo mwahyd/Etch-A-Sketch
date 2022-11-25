@@ -179,8 +179,11 @@ function eraseBox(event) {
 function clearCanvas() {
   const gridBox = document.querySelectorAll(".box");
   gridBox.forEach((box) => {
-    if (box.classList.contains("colour-in")) {
-      box.classList.remove("colour-in", "eraser-hover");
+    if (
+      box.classList.contains("colour-in") ||
+      box.classList.contains("new-colour")
+    ) {
+      box.classList.remove("colour-in", "new-colour", "eraser-hover");
       box.classList.add("hover-effect");
     }
   });
