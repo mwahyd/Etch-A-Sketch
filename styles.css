@@ -10,7 +10,7 @@
 }
 
 body {
-  height: 100vh;
+  min-height: 100vh;
   background-color: #f3f9d2;
   color: black;
   font-family: Poppins;
@@ -22,7 +22,7 @@ body {
 
 .container {
   /* border: 1px solid orangered; */
-  min-width: 1000px;
+  min-width: 900px;
   margin: 0 auto;
   padding: 15px 30px;
 }
