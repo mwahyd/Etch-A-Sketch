@@ -21,7 +21,7 @@ Tools:
 
 Features to Add:
 
-- Colour palette not limited to just 2 colours 
+- Using the applied method, allow users to paint with multiple colours
 - Change background styles of canvas
 
 ![Screenshot!](sketchpad-example.png)
